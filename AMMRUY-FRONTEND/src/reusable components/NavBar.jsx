@@ -189,7 +189,7 @@ export function NavBar({hover, className}) {
 
   const handleLogout = async () => {
     try {
-      await axios.post(`http://localhost:5001/logout`);
+      await axios.post(`https://ammruy-1.onrender.com/logout`);
       localStorage.removeItem('token'); 
       setIsLoggedIn(false);
       alert("Logged out successfully");
