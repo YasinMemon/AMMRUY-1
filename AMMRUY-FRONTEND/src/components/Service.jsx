@@ -7,7 +7,7 @@ function Service() {
       <div className="leftSide h-[400px] w-full md:w-[508px] m-auto">
         <img
           className='h-full w-full rounded-xl'
-          src="https://s3-alpha-sig.figma.com/img/748f/2a7f/bd1c1bc99e72dd08b1e3e47060b6502c?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PJBH9uj4fmz0Q5j9R2hju0PrLAabqlypq07IT4V-NSGD0Ax4JtG~2SDiZ1arKGCZEUoUeeXbnVWR81ceu3cHbFCmEDrhQ8jmcdrcjjHeMGmqRpqYqfYIt0w6iCJ4XmBsXWwr9hcGUKXJYb~eknTaBmePOpoGDOAfNopsv7jeTCSvgPZ5hbuYsqV3FgfehE2sK~JEJ5TURCwuoJEDW5iev2D4M9rW66ED34blDAkk~jE73WIhQe0NtoO-KrLDVUmHjWnDtMMGrYSG7h62Pto9d3Foayjd~5Ku32wT1MeUOhtrGoE3jLuIMugZ1F6Q2rPWCX2pvunqOXG9R4Hv7gohXA__" />
+          src="https://electronicservices.co.in/wp-content/uploads/2023/01/istockphoto-1180607321-612x612-1.jpg" />
       </div>
       <div className="rightSide m-auto font-serif">
         <h1 className='text-2xl md:text-4xl my-4'>Explore Our <span className='btn-txt'>Services</span></h1>

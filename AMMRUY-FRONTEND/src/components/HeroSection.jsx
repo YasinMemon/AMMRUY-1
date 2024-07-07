@@ -2,10 +2,11 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 import { Link } from 'react-router-dom';
+import ac from '../assets/Services-img/ac.png'
 
 const HeroSection = () => {
   // Constants for styles and text sequences
-  const heroImageSrc = "https://s3-alpha-sig.figma.com/img/fd63/fa31/b2c04db87065f2bcd1996afeb9fea821?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U5LLKkcvAIVqOnq-uyubJindQ7ZUiszg~rM7XDc7EgNTvVx35GhUT7jyy8uSkm4xOZjrSt9Y2vwLpjbxiNfSxE-r0iV8qFhgeBWDzjqSKYU6EnkgK5B68oXzheQSKq7eopooFcyeAn6uEljVdkJaue3R1GB1--IFBl3w1pOzUef8t4ddLevrguXCuEg3EG6KmYOsNPqa2WhgqO7omujvocIOBWd6x8~Uq~XMTJy0bWmmyHuvF0B-JXUPSZXRjtimklMkn7P6qxx21f0aoe2jwVcBBiyHtl6hY-tVgIBnXxns~oHz0cdCPfxvNN6eMQHmydomQ5Xn4E9hgwtXk~do5A__";
+  const heroImageSrc = {ac};
   const textSequences = [
     'We provide AC Repair Service',
     1000,
@@ -22,7 +23,7 @@ const HeroSection = () => {
       <div className="hero-content-left h-[400px] w-full md:w-[508px] m-auto">
         <img
           className='w-full h-full object-cover rounded-xl'
-          src={heroImageSrc}
+          src={ac}
           alt="Appliance Repair Services"
         />
       </div>
