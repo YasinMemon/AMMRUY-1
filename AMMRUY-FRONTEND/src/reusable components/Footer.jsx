@@ -1,4 +1,6 @@
 import { Typography } from "@material-tailwind/react";
+import logo from "../assets/logo.png"
+import { useSelector } from "react-redux";
 
 const LINKS = [
   {
@@ -18,20 +20,17 @@ const LINKS = [
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
+  const {mode} = useSelector((state) => state.darkMode);
   return (
-    <footer className="relative w-full mt-3 bg-gray-400">
+    <footer className="relative w-full mt-3 " style={{background: mode? '#131212':'rgb(156 163 175)'}}>
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="flex-none md:flex flex-wrap justify-between gap-4 ">
-          {/* <Typography variant="h5"  className="mb-6">
-            
-            SharpCareer Solutions
-          </Typography> */}
           <div className="flex-none basis-7/8 md:flex md:flex-wrap justify-around gap-[5.25rem] md:pl-30 pt-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
                   variant="small"
-                  className="mt-2 md:mt-0 md:mb-3 font-semibold opacity-60 text-lg "
+                  className="mt-2 md:mt-0 md:mb-3 font-semibold text-lg "
                 >
                   {title}
                 </Typography>
@@ -41,7 +40,7 @@ export function Footer() {
                       as="a"
                       href="#"
                       color="gray"
-                      className="py-1 font-normal transition-colors hover:text-[#050505] hover:underline"
+                      className="py-1 font-normal transition-colors hover:underline opacity-70"
                     >
                       {link}
                     </Typography>
@@ -50,20 +49,13 @@ export function Footer() {
               </ul>
             ))}
           </div>
-          <div className="flex self-center gap-2">
-            <input type="newsletter" name="newsletter-form" placeholder="Email address" className="rounded-[3px] w-[232px]"/>
-            <button className='BTN-color roboto-thin text-white px-8 py-2 rounded-full'>Subscribe</button>
-          </div>
-        </div>
-        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
-          <Typography
-            variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
-          >
-            &copy; {currentYear} <a href="https://material-tailwind.com/">SharpCareer Solutions</a>. All
-            Rights Reserved.
-          </Typography>
-          <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
+          <div className="flex flex-col justify-center">
+            <div className="text-xl pb-3 font-semibold"><h1>Newsletter</h1></div>
+           <div className="flex self-start md:self-center gap-2 flex-col md:flex-row">
+           <input type="newsletter" name="newsletter-form" placeholder="Email address" className="rounded-[3px] h-9 md:w-[294px]" />
+           <button className='BTN-color roboto-thin text-white px-8 py-2 rounded-full'>Subscribe</button>
+           </div>
+            <div className="flex gap-4 text-blue-gray-900 pt-2">
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -72,6 +64,12 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
+            </Typography>
+            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clip-rule="evenodd"/>
+              <path fill="currentColor" d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"/>
+            </svg>
             </Typography>
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -97,6 +95,27 @@ export function Footer() {
               </svg>
             </Typography>
           </div>
+          <div>
+            <p>Mobile: +91784885XXXX</p>
+            <p>Email: SharpCareersolutions@gmail.com</p>
+          </div>
+          </div>
+        </div>
+        
+        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+        <div className="flex flex-row items-center"> 
+        <img src={logo} alt="logo" className="max-w-[20%] pr-2" />
+        <h1 className="text-xl">SharpCarrer Solutions</h1>
+        </div>
+          <Typography
+            variant="small"
+            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+          >
+            &copy; {currentYear} <a href="https://material-tailwind.com/">SharpCareer Solutions</a>. All
+            Rights Reserved.
+          </Typography>
+          <div>
+        </div>
         </div>
       </div>
     </footer>

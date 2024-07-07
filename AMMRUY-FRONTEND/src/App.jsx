@@ -28,7 +28,7 @@ function App() {
   
   return (
     <>
-    <div style={{background: mode? '#222':'white' , color:mode? 'white':'black'}}>
+    <div style={{background: mode? 'black':'white' , color:mode? 'white':'black'}}>
       <Router >
         <Routes>
           <Route path='/auth' element={<Authentication/>}></Route>

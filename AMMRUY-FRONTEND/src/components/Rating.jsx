@@ -17,7 +17,7 @@ const Rating = () => {
 
   const fetchRatings = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/ratings');
+      const response = await axios.get('https://ammruy-1.onrender.com/ratings');
       setRatings(response.data);
     } catch (error) {
       console.error('Error fetching ratings:', error);
@@ -40,7 +40,7 @@ const Rating = () => {
           return alert("Please Login First to Give Rating")
         }
 
-      await axios.post('http://localhost:5001/ratings', { service: selectedService, rating: newRating },{
+      await axios.post('https://ammruy-1.onrender.com/ratings', { service: selectedService, rating: newRating },{
         headers: {
             Authorization: `Bearer ${token}`
           }
